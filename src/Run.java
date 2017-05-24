@@ -7,9 +7,9 @@ import java.util.regex.Pattern;
 public class Run {
 
     public static void main(String[] args) {
-        String tmp = "asdq876@dsia.com";
+        String tmp = "13abc";
 
-        String str = "[a..zA..Z]{1}\\w*@\\w+.(ru|com){1}";
+        String str = "(\\d+){2}[abc]{3}";
         //System.out.println(str);
 
         Pattern patt = Pattern.compile(str);
@@ -17,7 +17,7 @@ public class Run {
         Matcher mtch = patt.matcher(tmp);
 
         System.out.println(mtch.matches());
-
+       // System.out.println("123".matches("\\d+"));
 
     }
 
